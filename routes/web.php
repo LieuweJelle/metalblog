@@ -15,4 +15,22 @@ Route::get('/', function () {
 });
 */
 
-Route::get('/', 'BlogsController@index');
+Route::resource('posts', 'PostsController');
+//Route::get('/', 'BlogsController@index');
+Route::get('/', 'PagesController@index');
+Route::get('/about', 'PagesController@about');
+Route::get('/services', 'PagesController@services');
+
+Route::get('/posts/tags/{tag}', 'TagsController@index');
+
+Route::post('/posts/{post}/comments', 'CommentsController@store');
+Route::get('/posts/comments/{comment}', 'CommentsController@destroy');
+
+
+
+
+
+
+Route::fallback(function () {
+    return 'Sorry Mike! This page does not exist.';    //'. auth()->user()->name . '
+});

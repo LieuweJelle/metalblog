@@ -29,22 +29,26 @@
 <div class="card">
   <h3>Tags</h3>
   <ul class="list-unstyled">
+  @if(!empty($tags))
       @foreach($tags as $tag)
           <li>
               <a href="/posts/tags/{{ $tag }}">{{ $tag }}</a>
           </li>
       @endforeach
+  @endif
   </ul>
 </div>
 
 <div class="card">
   <h3>Archives</h3>
   <ul class="list-unstyled">
+  @if(!empty($archives))
       @foreach($archives as $archive)
           <li>
               <a href="/posts?month={{ $archive['month'] }}&year={{ $archive['year'] }}">{{ $archive['month'] .' '. $archive['year'] }}</a>
           </li>
       @endforeach
+    @endif
   </ul>
 </div>
 
@@ -70,11 +74,13 @@
 <div class="card">
   <h3>Tags</h3>
   <ul class="list-unstyled">
+  @if(!empty($tags))
     @foreach($tags as $tag)
       <li>
         <a href="/posts/tags/{{ $tag }}">{{ $tag }}</a>
       </li>
     @endforeach
+  @endif
   </ul>
 </div>
 

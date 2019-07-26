@@ -23,7 +23,7 @@
     <img class="portrait" src="{{ asset('img/lieuwe.jpg') }}" width="77" alt="image" />
     <div class="fakeimgportrait"></div>
     <table class="table"><tr><td>Laravel</td></tr><tr><td>PHP</td></tr><tr><td>JS HTML CSS</td></tr></table><br />
-    <p class="after">Lieuwe Jelle hierzoot... Noise, a way of life.</p>
+    <p class="after">Noise, a way of life.</p>
 </div>
 
 <div class="card">

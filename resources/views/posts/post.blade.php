@@ -3,7 +3,7 @@
     <h3 style="color:darkred">
     @if(!empty($post->tags))
         @foreach($post->tags as $tag)
-        {{-- <a href="/posts/tags/{{ $tag->name }}"></a> --}}
+         <a href="/posts/tags/{{ $tag->name }}"></a>
             {{ ", ".$tag->name }}
         @endforeach
     @endif

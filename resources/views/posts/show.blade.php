@@ -4,7 +4,7 @@
 <div class="card">
     <h2><a href="/posts/{{ $post->id }}" class="black">{{ $post->title }}</a></h2>
     <h3 style="color:darkred">
-    @if(count($post->tags))
+    @if(!empty($post->tags))
         @foreach($post->tags as $tag)
         {{-- <a href="/posts/tags/{{ $tag->name }}"></a> --}}
             {{ ", ".$tag->name }}
@@ -26,6 +26,7 @@
     @endif
 
     <?php $count = 0; ?>
+    @if(!empty($post->comments))
     @foreach($post->comments as $comment)
         <?php $count++; ?>
         <div class="subcard">
@@ -34,10 +35,11 @@
             <h3 style="color:darkred">{{ $comment->title }}</h3>
             <div class="comm">{!! $comment->body !!}</div><span class="right"><a href="#" class="x">x</a></span>
         </div>
-        @if(count($post->comments) >= $count)
+        @if(!empty($post->comments) >= $count)
             <?php echo '<br />'; ?>
         @endif
     @endforeach
+    @endif
     
     @if(!$post->disabled)
         <button type="button" id="button10" class="button button10">reageer</button><br />

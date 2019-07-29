@@ -21,7 +21,7 @@ class Kernel extends HttpKernel
         \App\Http\Middleware\TrustProxies::class,
 
         //custom middleware for https redirect
-        \App\Http\Middleware\HttpsMiddleware::class
+        //\App\Http\Middleware\HttpsMiddleware::class
 
     ];
 

@@ -54,7 +54,7 @@
 
 <div class="card">
     <h3>Logos</h3>
-    <div class="fakeimgsmall"><img src="/storage/cover_images/atg-logo.jpg" width="170" alt="image" /></div><br />
+    <div class="fakeimgsmall"><img src="{{ asset('storage/cover_images/atg-logo.jpg') }}" width="170" alt="image" /></div><br />
     <div class="fakeimgsmall"><img src="/storage/cover_images/abr-logo.jpg" width="170" alt="image" /></div><br />
     <div class="fakeimgsmall"><img src="/storage/cover_images/fa-logo.jpg" width="170" alt="image" /></div><br />
     <div class="fakeimgsmall"><img src="/storage/cover_images/autopsy-logo.png" width="170" alt="image" /></div><br />

@@ -14,7 +14,7 @@
  <link href="{{ asset('css/bootstrap-formhelpers.css') }}" rel="stylesheet">
    <link href="{{ asset('css/bootstrap-formhelpers-countries.flags.css') }}" rel="stylesheet">
  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
-    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
 </head>
 <body class="blog">
     @if ($flash = session('message'))

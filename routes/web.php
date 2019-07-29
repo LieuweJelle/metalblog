@@ -14,10 +14,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 */
-// forcing https:
-if (env('APP_ENV') === 'production') {
-    URL::forceSchema('https');
-}
 //Route::get('/', 'BlogsController@index');
 Route::get('/', 'PagesController@index');
 Route::get('/about', 'PagesController@about');

@@ -6,7 +6,7 @@
         <button type="button" class="button" id="button5" onclick="javascript:location.href='{{ url('/login') }}'">inloggen</button><br />
         <div id='fieldspace'></div>
     @endif
-    <form class="example" action="search.blade.php" method="post">
+    <form class="example" action="/posts/search" method="post">
         <input type="text" placeholder="Search.." name="search" id="search" class="search">
         <div id='fieldspace'></div>
         <button type="button" class="button" id="button4">zoeken in blog</button>
@@ -23,34 +23,38 @@
     <img class="portrait" src="{{ asset('img/lieuwe.jpg') }}" width="77" alt="image" />
     <div class="fakeimgportrait"></div>
     <table class="table"><tr><td>Laravel</td></tr><tr><td>PHP</td></tr><tr><td>JS HTML CSS</td></tr></table><br />
-    <p class="after">Lieuwe Jelle hierzoot... Noise, a way of life.</p>
+    <p class="after">Noise, a way of life.</p>
 </div>
 
 <div class="card">
   <h3>Tags</h3>
   <ul class="list-unstyled">
-      @foreach($tags as $tag)
-          <li>
-              <a href="/posts/tags/{{ $tag }}">{{ $tag }}</a>
-          </li>
-      @endforeach
+    @if(!empty($tags))
+    @foreach($tags as $tag)
+        <li>
+            <a href="/posts/tags/{{ $tag }}">{{ $tag }}</a>
+        </li>
+    @endforeach
+    @endif
   </ul>
 </div>
 
 <div class="card">
   <h3>Archives</h3>
- <ul class="list-unstyled">
-    @foreach($archives as $archive)
-        <li>
-            <a href="/posts?month={{ $archive['month'] }}&year={{ $archive['year'] }}">{{ $archive['month'] .' '. $archive['year'] }}</a>
-        </li>
-   @endforeach 
+  <ul class="list-unstyled">
+  @if(!empty($archives))
+      @foreach($archives as $archive)
+          <li>
+              <a href="/posts?month={{ $archive['month'] }}&year={{ $archive['year'] }}">{{ $archive['month'] .' '. $archive['year'] }}</a>
+          </li>
+      @endforeach
+    @endif
   </ul>
 </div>
 
 <div class="card">
     <h3>Logos</h3>
-    <div class="fakeimgsmall"><img src="/storage/cover_images/atg-logo.jpg" width="170" alt="image" /></div><br />
+    <div class="fakeimgsmall"><img src="{{ asset('storage/cover_images/atg-logo.jpg') }}" width="170" alt="image" /></div><br />
     <div class="fakeimgsmall"><img src="/storage/cover_images/abr-logo.jpg" width="170" alt="image" /></div><br />
     <div class="fakeimgsmall"><img src="/storage/cover_images/fa-logo.jpg" width="170" alt="image" /></div><br />
     <div class="fakeimgsmall"><img src="/storage/cover_images/autopsy-logo.png" width="170" alt="image" /></div><br />
@@ -62,16 +66,21 @@
     <div class="fakeimgsmall"><img src="/storage/cover_images/arckanum-logo.jpg" width="170" alt="image" /></div>
     <div class="fakeimgsmall"><img src="/storage/cover_images/slayer-logo.png" width="170" alt="image" /></div>
     <div class="fakeimgsmall"><img src="/storage/cover_images/ent-logo.jpg" width="170" alt="image" /></div>
+    <div class="fakeimgsmall"><img src="/storage/cover_images/Melvinslogo.png" width="170" alt="image" /></div>
+    <div class="fakeimgsmall"><img src="/storage/cover_images/grave-logo.png" width="170" alt="image" /></div>
+    <div class="fakeimgsmall"><img src="/storage/cover_images/Rammstein-logo.png" width="170" alt="image" /></div>
 </div>
 
 <div class="card">
   <h3>Tags</h3>
   <ul class="list-unstyled">
+  @if(!empty($tags))
     @foreach($tags as $tag)
       <li>
         <a href="/posts/tags/{{ $tag }}">{{ $tag }}</a>
       </li>
     @endforeach
+  @endif
   </ul>
 </div>
 

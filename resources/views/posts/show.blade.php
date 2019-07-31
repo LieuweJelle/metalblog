@@ -20,8 +20,11 @@
     
     @if($post->cover_image) 
         <div class="fakeimg">
-        <img src="/storage/cover_images/{{ $post->cover_image }}" width="760" alt="image" />
-        <!-- <img src="http://localhost/senior/storage/cover_images/{{ $post->cover_image }}" width="760" alt="image" /> -->
+        @if(env('DB_DATABASE')!='blog')
+            <img src="https://www.lieuwe-jelle.nl/metalblog/storage/app/public/cover_images/{{ $post->cover_image }}" width="760" alt="image" />
+        @elseif(env('DB_DATABASE')=='blog')
+            <img src="/storage/cover_images/{{ $post->cover_image }}" width="760" alt="image" />
+        @endif
         </div>
     @endif
 

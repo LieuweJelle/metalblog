@@ -13,7 +13,7 @@ class PostsController extends Controller
 {
     public function index(){
         $posts = Post::latest() //orderBy('created_at', 'desc')
-        //->filter(request(['month', 'year']))
+        ->filter(request(['month', 'year']))
         ->get();
 
         return view('posts.index', compact('posts'));

@@ -12,6 +12,7 @@
 
     <form method="POST" action="/posts" enctype="multipart/form-data">
         @csrf
+        
         <div class="inform">
             <span class='namefield'>Titel blog</span>
             <input type='text' size='43' maxlength='50' name='title' value='' autocomplete='off' /><br />

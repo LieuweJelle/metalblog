@@ -7,13 +7,13 @@
             {{ session('message') }}
         </div>
     @endif
-    <h2>Blog: gewijzigd artikel publiseren:</h2>
+    <h2 class='darkred'>Blog: gewijzigd artikel publiseren:</h2>
     <p>Titel Blog, Text Blog en Categorie zijn verplicht in te vullen.<br />
     Subtitel en Subtext zijn optioneel.<br />
     Selecteer vervolgens eerst een foto en druk daarna op 'Upload naar Website'.<br />
     P.S. Je kunt ook geen foto selecteren!</p>
     <p>De text in de blog kun je opmaken met <u>HTML!</u><br />
-    Voor een goede snelle cursus ga naar: <a href="https://www.w3schools.com/html/">w3schools.com</a></p><br />
+    Voor een goede snelle cursus <u>HTML</u> ga naar: <a href="https://www.w3schools.com/html/">w3schools.com</a></p><br />
  
     <form method="POST" action="{{ action('PostsController@update', [ 'id' => $post->id ]) }}" name="form1" class="form1" enctype="multipart/form-data">
         @csrf
@@ -22,7 +22,7 @@
         <div class="inform">
             <span class='namefield'>Titel Blog</span>
             <input type='text' size='43' maxlength='50' name='title' value='{{ $post->title }}' autocomplete='off' /><br />
-            <div id='fieldspace'></div>
+            <div id='fieldspace'></div><div id='fieldspace'></div>
             <span class='namefield'>Text Blog:</span><br />
             <textarea class="form-control" rows="10" cols="75" id="textarea" name="body" onfocus="magic();">{{ $post->body }}</textarea><br />
             <script src="{{ asset('vendor/unisharp/laravel-ckeditor/ckeditor.js') }}"></script>
@@ -33,7 +33,7 @@
                 });
             </script>
             <div id='fieldspace'></div>
-            <span class='namefield'>Categorie</span>
+            <span class='namefield'>Categorie<br />meerdere opties mogelijk</span>
             <select name='cat[]' style='width:150px' multiple>
             @foreach($tags as $tag)
                 <option value='{{ $tag->id }}' {{($post->tags->contains($tag->id)) ? "selected" : ""}}>{{ $tag->name }}</option>";
@@ -46,8 +46,8 @@
             <div id='fieldspace'></div>
             <span class='namefield'>Subtitel</span>
             <input type='text' size='43' maxlength='50' name='subtitle' value='{{ $post->subtitle }}' autocomplete='off' /><br />
-            <div id='fieldspace'></div>
-            <label for="comment">Subtext</label><br />
+            <div id='fieldspace'></div><div id='fieldspace'></div>
+            <span class='namefield'>Subtext</span><br />
             <textarea class="form-control" rows="2" cols="75" id="comment2" name="subbody">{{ $post->subbody }}</textarea><br /><br />
             <script>
                 CKEDITOR.replace( 'comment2', {

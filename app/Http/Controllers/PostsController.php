@@ -11,6 +11,10 @@ use App\Tag;
 
 class PostsController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth')->except(['index','show']);
+    }
+  
     public function index(){
         $posts = Post::latest() //orderBy('created_at', 'desc')
         ->filter(request(['month', 'year']))

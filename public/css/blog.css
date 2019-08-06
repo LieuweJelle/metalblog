@@ -138,7 +138,8 @@ p.after {  position:relative;
   padding: 0px 20px;
   margin: 5px 10px;
 }
-
+.darkred {
+color:darkred; }
 /* Clear floats after the columns */
 .row:after {
   content: "";
@@ -167,6 +168,8 @@ p.after {  position:relative;
 /* newArticle */
 .namefield {
   font-size: 12pt;
+  font-weight: bold;
+  color:darkred; 
   float:left;
   width:200px; }
 .namefieldPw {

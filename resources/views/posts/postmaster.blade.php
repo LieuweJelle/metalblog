@@ -40,8 +40,9 @@
       </div>
     </div>
     @include('posts.footer')
+    <!-- Under Construction
     <script src="{{ asset('js/bootstrap-formhelpers-selectbox.js') }}"></script>
     <script src="{{ asset('js/bootstrap-formhelpers-countries.en_US.js') }}"></script>
     <script src="{{ asset('js/bootstrap-formhelpers-countries.js') }}"></script>
-  </body>
+  </body> -->
 </html>  

@@ -24,7 +24,7 @@
     <img class="portrait" src="{{ asset('img/lieuwe.jpg') }}" width="77" alt="image" />
     <div class="fakeimgportrait"></div>
     <table class="table"><tr><td>Laravel</td></tr><tr><td>PHP</td></tr><tr><td>JS HTML CSS</td></tr></table><br />
-    <p class="after">Lieuwe Jelle hierzoot... Noise, a way of life.</p>
+    <p class="after">Noise, a way of life.</p>
 </div>
 
 <div class="card">
@@ -50,19 +50,12 @@
 </div>
 
 <div class="card">
-    <h3>Logos</h3>
-    <div class="fakeimgsmall"><img src="/storage/cover_images/atg-logo.jpg" width="170" alt="image" /></div><br />
-    <div class="fakeimgsmall"><img src="/storage/cover_images/abr-logo.jpg" width="170" alt="image" /></div><br />
-    <div class="fakeimgsmall"><img src="/storage/cover_images/fa-logo.jpg" width="170" alt="image" /></div><br />
-    <div class="fakeimgsmall"><img src="/storage/cover_images/autopsy-logo.png" width="170" alt="image" /></div><br />
-    <div class="fakeimgsmall"><img src="/storage/cover_images/bt-logo.png" width="170" alt="image" /></div><br />
-    <div class="fakeimgsmall"><img src="/storage/cover_images/as-logo.png" width="170" alt="image" /></div><br />
-    <div class="fakeimgsmall"><img src="/storage/cover_images/images.jpeg" width="170" alt="image" /></div><br />
-    <div class="fakeimgsmall"><img src="/storage/cover_images/SYLlogo.png" width="170" alt="image" /></div><br />
-    <div class="fakeimgsmall"><img src="/storage/cover_images/neurosis-logo.png" width="170" alt="image" /></div>
-    <div class="fakeimgsmall"><img src="/storage/cover_images/arckanum-logo.jpg" width="170" alt="image" /></div>
-    <div class="fakeimgsmall"><img src="/storage/cover_images/slayer-logo.png" width="170" alt="image" /></div>
-    <div class="fakeimgsmall"><img src="/storage/cover_images/ent-logo.jpg" width="170" alt="image" /></div>
+    <h3>Logos</h3><br /><br />
+    @foreach($logos as $logo)
+            <div class="fakeimgsmall">
+                <img src="/storage/cover_images/{{ $logo->logo }}" width="170" alt="image" />
+            </div>
+    @endforeach
 </div>
 
 <div class="card">

@@ -51,7 +51,10 @@
             </script>
             <div id='fieldspace'></div>
             <span class='namefield'>Selecteer een foto:</span>
-            <input type="file" name="cover_image" id="cover_image" /><br /><br />
+            <input type="file" name="cover_image" id="cover_image" /><br />
+            <div id='fieldspace'></div>
+            <span class='namefield'>Selecteer een logo:</span>
+            <input type="file" name="cover_image2" id="cover_image2" /><br /><br />
 <!--  under construction!!            
 <span class="bfh-countries" data-country="US" data-flags="true"></span><br /><br />
 <div class="bfh-selectbox bfh-countries" data-country="NL" data-flags="true">

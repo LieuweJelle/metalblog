@@ -48,10 +48,3 @@ Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 Route::fallback(function () {
     return 'Sorry Mike! This page does not exist.';    //'. auth()->user()->name . '
 });
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');

@@ -17,6 +17,7 @@ class AddColumnsToPostsTable extends Migration
             $table->string('subtitle')->nullable();
             $table->Text('subbody')->nullable();
             $table->string('cover_image');
+            $table->string('logo');
             $table->boolean('disabled')->default(false);
         });
     }
@@ -32,6 +33,7 @@ class AddColumnsToPostsTable extends Migration
             $table->dropColumn('subtitle');
             $table->dropColumn('subbody');
             $table->dropColumn('cover_image');
+            $table->dropColumn('logo');
             $table->dropColumn('disabled');
 
         });

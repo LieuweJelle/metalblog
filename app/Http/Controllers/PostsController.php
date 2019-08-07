@@ -39,7 +39,8 @@ class PostsController extends Controller
         $this->validate($request, [
             'title' => 'required',
             'body' => 'required',
-            'cover_image' => 'image|nullable|max:1999'
+            'cover_image' => 'image|nullable|max:1999',
+            'logo' => 'image|nullable|max:1999'
         ]);
         
         // Handle File Upload
@@ -56,8 +57,17 @@ class PostsController extends Controller
             $path = $request->file('cover_image')->storeAs('public/cover_images', $fileNameToStore);
             //-> storage/app/public/ php artisan storage:link
         } /*else {
-            $fileNameToStore = 'noimage.jpg';
+            $logoToStore = 'noimage.jpg';
         }*/
+        
+        // Handle File Upload logo
+        if($request->hasFile('cover_image2')){
+            $filenameWithExt = $request->file('cover_image2')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('cover_image2')->getClientOriginalExtension();
+            $logoToStore= $filename.'_'.time().'.'.$extension;
+            $path = $request->file('cover_image2')->storeAs('public/cover_images', $logoToStore);
+        } 
         
         // auth()->user()->publish(new Post(request(['title', 'body', 'subtitle', 'subbody', auth()->user()->id, $fileNameToStore]))); ???
         $post = new Post;
@@ -67,6 +77,7 @@ class PostsController extends Controller
         $post->subbody = $request->input('subbody');
         $post->user_id = auth()->user()->id;
         $post->cover_image = $fileNameToStore;
+        $post->logo = $logoToStore;
         $post->save();
         
         // Create New Tag
@@ -141,16 +152,20 @@ class PostsController extends Controller
 
          // Handle File Upload
         if($request->hasFile('cover_image')){
-            // Get filename with the extension
             $filenameWithExt = $request->file('cover_image')->getClientOriginalName();
-            // Get just filename
             $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
-            // Get just ext
             $extension = $request->file('cover_image')->getClientOriginalExtension();
-            // Filename to store
             $fileNameToStore= $filename.'_'.time().'.'.$extension;
-            // Upload Image
             $path = $request->file('cover_image')->storeAs('public/cover_images', $fileNameToStore);
+        }
+
+         // Handle File Upload logo
+        if($request->hasFile('cover_image2')){
+            $filenameWithExt = $request->file('cover_image2')->getClientOriginalName();
+            $filename = pathinfo($filenameWithExt, PATHINFO_FILENAME);
+            $extension = $request->file('cover_image2')->getClientOriginalExtension();
+            $logoToStore= $filename.'_'.time().'.'.$extension;
+            $path = $request->file('cover_image2')->storeAs('public/cover_images', $logoToStore);
         }
 
         // Create Post
@@ -162,6 +177,10 @@ class PostsController extends Controller
         if($request->hasFile('cover_image')){
             //Storage::delete('public/cover_images/' . $post->cover_image);
             $post->cover_image = $fileNameToStore;
+        }
+        if($request->hasFile('cover_image2')){
+            //Storage::delete('public/cover_images/' . $post->cover_image);
+            $post->logo = $logoToStore;
         }
         $post->save();
         
@@ -242,6 +261,5 @@ class PostsController extends Controller
         $post->delete();
         return redirect('/posts')->with('success', 'Post Removed');
     }
-    
     
 }

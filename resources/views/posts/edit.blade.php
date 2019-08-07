@@ -57,7 +57,10 @@
             </script>
             <div id='fieldspace'></div>
             <span class='namefield'>Selecteer een foto:</span>
-            <input type="file" name="cover_image" id="cover_image" /><br /><br />
+            <input type="file" name="cover_image" id="cover_image" /><br />
+            <div id='fieldspace'></div>
+            <span class='namefield'>Selecteer een logo:</span>
+            <input type="file" name="cover_image2" id="cover_image2" /><br /><br />
             <button type="submit" name="submit2" id="button2">Publiseren</button>
             <button type="button" name="back" id="button2" onclick="history.back()">Terug naar Blog</button>
             @include('layouts.error')

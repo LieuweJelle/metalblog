@@ -3,6 +3,7 @@
 namespace App;
 
 use Carbon\Carbon;
+use Illuminate\Support\Facades\DB;
 
 class Post extends Model
 {
@@ -53,6 +54,11 @@ class Post extends Model
         ->orderByRaw('min(created_at) desc')
         ->get()
         ->toArray();
+    }
+
+    public static function logos()
+    {
+      return DB::table('posts')->select('logo')->orderBy('created_at', 'desc')->get();
     }
 
 }

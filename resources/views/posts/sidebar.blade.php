@@ -52,9 +52,11 @@
 <div class="card">
     <h3>Logos</h3><br /><br />
     @foreach($logos as $logo)
-            <div class="fakeimgsmall">
-                <img src="/storage/cover_images/{{ $logo->logo }}" width="170" alt="image" />
-            </div>
+      @if(!empty($logo->logo))
+        <div class="fakeimgsmall">
+          <img src="/storage/cover_images/{{ $logo->logo }}" width="170" alt="image" />
+        </div>
+      @endif
     @endforeach
 </div>
 

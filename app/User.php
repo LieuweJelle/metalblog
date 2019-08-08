@@ -3,6 +3,7 @@
 namespace App;
 
 use Illuminate\Notifications\Notifiable;
+//use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
@@ -26,6 +27,10 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /*protected $casts = [
+        'email_verified_at' => 'datetime' ,
+    ];*/
    
     /**
      * The roles that belong to the user.
@@ -40,28 +45,28 @@ class User extends Authenticatable
         return $this->hasMany(Post::class);
     }
 
-    public function agendas()
+    /*public function agendas()
     {
         return $this->hasMany(Agenda::class);
     }
-   
+   */
     public function publish(Post $post)
     {
         return $this->posts()->save($post); //->create([]); user_id automatically applied. UC
     }
     
-    public function addAgenda($record)
+    /*public function addAgenda($record)
     {
-        /*Comment::create([
+        Comment::create([
           'record' => $record,
           'post_id' => $this->id,
           //'user_id' => 1
         ]);
         
         $this->comments()->create(['record' => $record],);
-        */
+        
         return $this->agendas()->create(compact('record'));
-    }
+    }*/
     
     
 }

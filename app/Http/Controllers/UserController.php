@@ -73,7 +73,7 @@ class UserController extends Controller
             }
         }
 
-        session()->flash('message', 'Bedankt voor het aanmaken van een Vrijwilliger'); // request()->session();
+        //session()->flash('message', 'Bedankt voor het aanmaken van een Vrijwilliger'); // request()->session();
         
         return redirect()->action('UserController@index');
     }

@@ -15,6 +15,10 @@
   @if (Auth::check())
     <button type="button" class="button" id="button1" onclick="javascript:location.href='{{ url('/posts/create') }}'">upload nieuw artikel</button><br />
     <div id='fieldspace'></div>
+    <button type="button" class="button" id="buttonnew1" onclick="javascript:location.href='{{ url('/users') }}'">register users</button><br />
+    <div id='fieldspace'></div>
+    <button type="button" class="button" id="buttonnew2" onclick="javascript:location.href='{{ url('/noise/noiseplayer.php') }}'">noiseplayer</button><br />
+    <div id='fieldspace'></div>
   @endif
 </div>
 

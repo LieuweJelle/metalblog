@@ -162,7 +162,7 @@
                         </div><br />
 
                         <div class="card">
-                            <div class="card-header">{{ __('Waarmee wilt u helpen') }}</div>
+                            <div class="card-header">{{ __('Functie(s)') }}</div>
                             
                             <div class="card-body">
                                 <?php $roles = \App\Role::all(); ?>
@@ -181,20 +181,23 @@
                             <div class="card-header">{{ __('Vertel iets over u zelf (werk, hobby\'s, interesses )') }}</div>
                     
                         <div class="form-group"><br />
-                            <textarea rows="4" cols="10" class="ta" name="intro" id="intro">{{ old('intro') }}</textarea>
+                            <textarea rows="4" cols="94" class="ta" name="intro" id="intro">{{ old('intro') }}</textarea>
                         </div>
                          
                         <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
+                            <div class="col-md-12 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Toevoegen') }}
                                 </button>
-                                <a href="/medewerkers" class="btn btn-outline-primary" onclick="history.back()">
+                                <a href="{{ route('users.index') }}" class="btn btn-outline-primary">
                                     {{ __('Terug') }}
+                                </a>
+                                <a href="{{ route('posts.index') }}" class="btn btn-primary">
+                                    {{ __('Terug naar Metalblog') }}
                                 </a>
                             </div>
                         </div>
-                    </form>
+                    </form><br />
                 </div>
             </div>
         </div>

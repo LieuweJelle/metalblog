@@ -139,7 +139,7 @@
                         </div><br />
 
                         <div class="card">
-                          <div class="card-header">{{ __('Waarmee wilt u helpen') }}</div>
+                          <div class="card-header">{{ __('Functie(s)') }}</div>
                           
                           <div class="card-body">
                               @foreach($roles as $role)
@@ -156,7 +156,7 @@
                           <div class="card-header">{{ __('Vertel iets over u zelf (werk, hobby\'s, interesses )') }}</div>
                     
                         <div class="form-group"><br />
-                            <textarea rows="4" cols="10" class="ta" name="intro" id="intro" readonly>{{ $user->intro }}</textarea>
+                            <textarea rows="4" cols="94" class="ta" name="intro" id="intro" readonly>{{ $user->intro }}</textarea>
                         </div>
                         
                         <div class="form-group row mb-0">
@@ -164,9 +164,9 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Verwijderen') }}
                                 </button>
-                                <button type="button" class="btn btn-outline-primary" onclick="history.back()">
+                                <a href="{{ route('users.index') }}"  class="btn btn-outline-primary">
                                     {{ __('Terug') }}
-                                </button>
+                                </a>
                             </div>
                         </div>
                     </form>

@@ -1,6 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
+<div class="form-group row mb-0">
+  <div class="col-md-6 offset-md-4">
+      <button type="button" class="btn btn-primary" onclick="location.href='{{ route('users.create') }}'">
+          {{ __('Toevoegen Admin of User') }}
+      </button>
+      <a href="{{ route('posts.index') }}"  class="btn btn-outline-primary">
+          {{ __('Terug naar Metalblog') }}
+      </a>
+  </div>
+</div><br />
+
 <table class="table table-striped table-bordered">
     <thead>
         <tr>
@@ -38,27 +49,25 @@
                 @endforeach
             </tr></tbody></table></td>
             <td>
-                <a class="btn btn-small btn-success" href="/users/{{ $user->id }}">Show this User</a>
-                <a class="btn btn-small btn-info" href="/users/{{ $user->id }}/edit">Edit this User</a>
-                <a class="btn btn-small btn-danger" href="/users/{{ $user->id }}/delete">Delete this User</a>
+                <a class="btn btn-small btn-success" href="/users/{{ $user->id }}">Show</a>
+                <a class="btn btn-small btn-info" href="/users/{{ $user->id }}/edit">Edit</a>
+                <a class="btn btn-small btn-danger" href="/users/{{ $user->id }}/delete">Delete</a>
             </td>
         </tr>
     @endforeach
     </tr></table></td>
     </tbody>
 </table>
- 
+
 <div class="form-group row mb-0">
   <div class="col-md-6 offset-md-4">
       <button type="button" class="btn btn-primary" onclick="location.href='{{ route('users.create') }}'">
-          {{ __('Toevoegen Senioren en Vrijwilligers') }}
+          {{ __('Toevoegen Admin of User') }}
       </button>
-      <a href="{{ action('UserController@indexall') }}" class="btn btn-outline-primary">
-          {{ __('Alles') }}
-      </a>
-      <a href="/"  class="btn btn-outline-primary">
-          {{ __('Terug') }}
+      <a href="{{ route('posts.index') }}"  class="btn btn-outline-primary">
+          {{ __('Terug naar Metalblog') }}
       </a>
   </div>
 </div>
-@endsection
+
+ @endsection

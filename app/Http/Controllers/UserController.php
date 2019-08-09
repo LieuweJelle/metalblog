@@ -2,13 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\User;
-use App\Role;
-use App\Http\Requests\StoreUser; //!!!!
-
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use App\User;
+use App\Role;
+use App\Http\Requests\StoreUser; //!!!!
 
 class UserController extends Controller
 {

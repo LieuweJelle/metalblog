@@ -16,7 +16,6 @@
 
                             <div class="col-md-6">
                                 <input id="firstname" type="text" class="form-control{{ $errors->has('firstname') ? ' is-invalid' : '' }}" name="firstname" value="{{ old('firstname') }}" required autofocus>
-
                                 @if ($errors->has('firstname'))
                                     <span class="invalid-feedback">
                                         <strong>{{ $errors->first('firstname') }}</strong>
@@ -30,7 +29,6 @@
 
                             <div class="col-md-6">
                                 <input id="lastname" type="text" class="form-control{{ $errors->has('lastname') ? ' is-invalid' : '' }}" name="lastname" value="{{ old('lastname') }}" required autofocus>
-
                                 @if ($errors->has('lastname'))
                                     <span class="invalid-feedback">
                                         <strong>{{ $errors->first('lastname') }}</strong>
@@ -110,7 +108,6 @@
 
                             <div class="col-md-6">
                                 <input id="street" type="text" class="form-control{{ $errors->has('street') ? ' is-invalid' : '' }}" name="street" value="{{ old('street') }}" required autofocus>
-
                                 @if ($errors->has('street'))
                                     <span class="invalid-feedback">
                                         <strong>{{ $errors->first('street') }}</strong>

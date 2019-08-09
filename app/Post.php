@@ -58,7 +58,7 @@ class Post extends Model
 
     public static function logos()
     {
-      return DB::table('posts')->select('logo')->orderBy('created_at', 'desc')->get();
+      return DB::table('posts')->select('logo', 'id')->orderBy('created_at', 'desc')->get();
     }
 
 }

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Gegenereerd op: 09 aug 2019 om 16:29
+-- Gegenereerd op: 07 aug 2019 om 18:35
 -- Serverversie: 10.1.30-MariaDB
 -- PHP-versie: 7.2.2
 
@@ -239,22 +239,26 @@ CREATE TABLE `role_user` (
 --
 
 INSERT INTO `role_user` (`role_id`, `user_id`) VALUES
-(1, 1),
 (2, 1),
 (2, 2),
 (2, 3),
-(2, 4),
 (2, 5),
-(2, 9),
-(2, 10),
-(3, 1),
+(2, 6),
 (3, 2),
 (3, 3),
-(3, 4),
 (3, 5),
 (3, 6),
-(3, 7),
-(3, 9);
+(4, 2),
+(4, 3),
+(4, 5),
+(4, 6),
+(4, 7),
+(5, 1),
+(5, 5),
+(6, 3),
+(7, 1),
+(7, 4),
+(7, 7);
 
 -- --------------------------------------------------------
 
@@ -326,14 +330,13 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`, `firstname`, `lastname`, `street`, `streetnumber`, `zipcode`, `place`, `telephone`, `intro`) VALUES
-(1, 'LieuweJelle', 'l.j.van.der.meulen@gmail.com', '$2y$10$fqO0PIPy5aHNO9FVXsFobeKJ8gsGFs/6fwV868FVBt3IMJZGEtskW', 'TGKh694XqmPZvYTDCUzxUOqWOPjFi19fPrmFkY8hdrE4j6vMnzLBIwB2t39K', '2018-04-23 10:58:28', '2019-08-09 08:52:11', 'Lieuwe Jelle', 'van der Meulen', 'Bedumerweg', '84', '9716AG', 'Groningen', '0612345678', 'Wielrennen, biljarten, muziek en websites bouwen.'),
-(2, 'Gepper', 'geppers@home.nl', '$2y$10$A9WkGbFmVfJkfrhpr9r6RuzJp6/x6x2WEo2ubzCQJly0Fy0L8jtMK', NULL, '2018-05-05 06:28:23', '2019-08-09 09:16:07', 'Gepkinus', 'Brouwer', 'Noorderstraat', '10', '9716AG', 'Groningen', '0612345678', 'Gepper hierzoot.'),
-(3, 'Henkie', 'henkie@home.nl', '$2y$10$ogtR0QjU0xwTbrxVrFzPh..z/vZGecMuJhTQsGTP/UdWqXfP0.poi', NULL, '2018-05-07 05:28:31', '2019-08-09 09:18:34', 'Henk', 'Troudes', 'Hoendiep', '123', '9718KL', 'Groningen', '0612345678', NULL),
-(4, 'Jcuperus', 'jaepcuperus@hotmail.com', '$2y$10$3fgwxDSms1lBEE2DKaftT.dUH68a.saQgF3lWHerSMbFccxxNLqYK', 'LPn2BymI4BKQzTpBU2uhNQyJK2UCR8pueCNNvSGW8i6kkMTmMMR8v0Wmw0vo', '2018-05-08 09:11:30', '2019-08-09 08:55:28', 'Jaep', 'Cuperus', 'Achterweg', '1', '9000AB', 'Groningen', '0612345678', 'Programmeren!!'),
-(5, 'Pietsie', 'p@home.nl', '$2y$10$rMnP3CGccPsLa00sb.KeSedKAn4FY3/jPw7AubjYnGjwaUxDaaKia', NULL, '2018-05-13 14:26:44', '2019-08-09 09:05:36', 'Petra', 'Holverda', 'Stappersteeg', '34', '2222GG', 'Britsum', '0612345678', 'Mag graag schoonmaken en zo.'),
-(6, 'jan', 'j@j.nl', '$2y$10$arcnn90kjFEDv2BSsHkPwej2f4ubQdn1Ql6sASPz7u0vyHpfIobRi', NULL, '2018-05-14 05:38:06', '2019-08-09 09:06:08', 'Jan Peter', 'Jansen', 'Stappersteeg', '11', '1111aa', 'Groningen', '0612345678', NULL),
-(7, 'L.J. van der Meulen', 'l@l.nl', '$2y$10$RPFgWdcywcXzf6J4xZvdJuaDl.JliC9CvXIFzPBVHNmafg0Y1PK4e', NULL, '2018-05-14 06:07:41', '2019-08-09 08:56:18', 'leo', 'van der Meulen', 'Bedumerweg 84', '34', '9716AG', 'Groningen', '0612345678', 'ik kan alleen commentaar leveren op deze website.'),
-(9, 'Mike', 'mjongsma@codegorilla.nl', '$2y$10$YMaWtQ1xYLeX4rZITH017.6F0fBUfRmeBUwZo5Li/.iyYi.LyRRLS', NULL, '2019-08-08 10:04:23', '2019-08-09 08:57:45', 'Mike', 'Jongsma', 'xxxx', '11', '1111XX', 'Groningen', '0611111111', NULL);
+(1, 'LieuweJelle', 'l.j.van.der.meulen@gmail.com', '$2y$10$fqO0PIPy5aHNO9FVXsFobeKJ8gsGFs/6fwV868FVBt3IMJZGEtskW', 'GoeOkYrXU7x2w1jhz3HOjfvhSjUHFlRmTVbABxAPjGLnELczcnL71BHhVgpW', '2018-04-23 10:58:28', '2018-05-07 06:59:31', 'Lieuwe Jelle', 'van der Meulen', 'Bedumerweg', '84', '9716AG', 'Groningen', '0612345678', 'Hallo, mijn naam is LieuweJelle!'),
+(2, 'Gepper', 'gepper@home.nl', 'bcrypt(\'slayer\')', NULL, '2018-05-05 06:28:23', '2018-05-07 08:50:47', 'Gepkinus', 'Brouwer', 'Noorderstraat', '10', '9716AG', 'Groningen', '0612345678', 'Gepper hierzoot.'),
+(3, 'Henkie', 'henk@home.nl', 'slayer', NULL, '2018-05-07 05:28:31', '2018-05-07 11:57:17', 'Henk', 'Troudes', 'Hoendiep', '123', '9718KL', 'Groningen', '0612345678', 'HoyHenkHier'),
+(4, 'Jcuperus', 'jaepcuperus@hotmail.com', '$2y$10$3fgwxDSms1lBEE2DKaftT.dUH68a.saQgF3lWHerSMbFccxxNLqYK', 'LPn2BymI4BKQzTpBU2uhNQyJK2UCR8pueCNNvSGW8i6kkMTmMMR8v0Wmw0vo', '2018-05-08 09:11:30', '2018-05-13 14:09:59', 'Jaep', 'Cuperus', 'Achterweg', '1', '9000AB', 'Groningen', '0612345678', 'Hallo'),
+(5, 'Pietsie', 'p@home.nl', '$2y$10$rMnP3CGccPsLa00sb.KeSedKAn4FY3/jPw7AubjYnGjwaUxDaaKia', NULL, '2018-05-13 14:26:44', '2018-05-13 14:26:44', 'Petra', 'Holverda', 'Stappersteeg', '34', '2222GG', 'Britsum', '0612345678', 'Mag graag schoonmaken.'),
+(6, 'jan', 'j@j.nl', '$2y$10$arcnn90kjFEDv2BSsHkPwej2f4ubQdn1Ql6sASPz7u0vyHpfIobRi', NULL, '2018-05-14 05:38:06', '2018-05-14 05:38:06', 'Jan Peter', 'Jansen', 'Stappersteeg', '11', '1111aa', 'Groningen', '0612345678', 'Schoonmaken is leuk'),
+(7, 'L.J. van der Meulen', 'l@l.nl', '$2y$10$RPFgWdcywcXzf6J4xZvdJuaDl.JliC9CvXIFzPBVHNmafg0Y1PK4e', NULL, '2018-05-14 06:07:41', '2018-05-14 06:07:41', 'leo', 'van der Meulen', 'Bedumerweg 84', '34', '9716AG', 'Groningen', '0612345678', 'hoy');
 
 --
 -- Indexen voor geëxporteerde tabellen
@@ -445,7 +448,7 @@ ALTER TABLE `tasks`
 -- AUTO_INCREMENT voor een tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

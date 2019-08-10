@@ -13,7 +13,11 @@ class Tag extends Model
 
     public function getRouteKeyName()
     {
-        return 'name'; //http://senior.lar/posts/tags/laravel
+        return 'name';
+    }
+    public static function genres()
+    {
+      return DB::table('tags')->select('logo', 'id')->orderBy('created_at', 'desc')->get();
     }
 
 }

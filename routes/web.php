@@ -46,5 +46,5 @@ Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 
 Route::fallback(function () {
-    return 'Sorry Mike! This page does not exist.';    //'. auth()->user()->name . '
+    return 'Sorry Mike! This page does not exist... yet .';    //'. auth()->user()->name . '
 });

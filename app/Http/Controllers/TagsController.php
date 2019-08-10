@@ -9,8 +9,8 @@ class TagsController extends Controller
 {
     public function index(Tag $tag) 
     {
-      //return $tag; //http://senior.lar/posts/tags/laravel
-      $posts = $tag->posts;
+      //$posts = $tag->posts;
+      $posts = $tag->posts->sortByDesc('created_at');
       return view('posts.index', compact('posts'));
     }
 

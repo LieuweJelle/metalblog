@@ -3,8 +3,7 @@
     <h3 style="color:darkred">
     @if(!empty($post->tags))
         @foreach($post->tags as $tag)
-            <a href="/posts/tags/{{ $tag->name }}"></a>
-            {{ ", ".$tag->name }}
+            <a style="text-decoration:none" href="/posts/tags/{{ $tag->name }}">{{ ", ".$tag->name }}</a>
         @endforeach
     @endif
     </h3><br />
@@ -56,9 +55,9 @@
             <div id="react" class="react">
                 <br />&#8658;&nbsp;&nbsp;Je moet ingelogd zijn om te reageren.<br />
                 <ul>
-                  <li><a href="">inloggen</a></li>
-                  <li><a href="">registreer mij!</a></li>
-                  <li><a href="">nieuw wachtwoord</a></li>
+                  <li><a href="{{ route('login') }}">inloggen</a></li>
+                  <li><a href="{{ route('users.create') }}">registreer mij!</a></li>
+                  <li><a href="{{ route('login') }}">nieuw wachtwoord</a></li>
                 </ul>
             </div>
         @endif {{-- --}}
@@ -67,22 +66,3 @@
         Hier kan niet meer op gereageerd worden.
     @endif
 </div>
-<script src="{{ asset('js/functions.js') }}"></script>
-<script>
-  $(".react").each(function() {
-    $(this).hide();
-  });
-  $(".button10").each(function() {
-    $(this).on("click", function() {
-
-      var $div = $(this).siblings("#react");
-      $div.toggle(2000);
-    });
-  });
-</script>
-
-<!-- <script>
-	  	$('#loginblock').slideUp(1000);
-	  $('#loginblock').slideDown(2000);
-//loadLogin("login.php", callbackLogin);
-</script> -->

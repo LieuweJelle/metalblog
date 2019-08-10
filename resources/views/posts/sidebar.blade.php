@@ -17,7 +17,7 @@
     <div id='fieldspace'></div>
     <button type="button" class="button" id="buttonnew1" onclick="javascript:location.href='{{ url('/users') }}'">register users</button><br />
     <div id='fieldspace'></div>
-    <button type="button" class="button" id="buttonnew2" onclick="javascript:location.href='{{ url('/noise/noiseplayer.php') }}'">noiseplayer</button><br />
+    <a  class="button" href="{{ url('/noise/noiseplayer.php') }}" target="_blank"><button class="button" id="button6">noisePlayer()</button></a><br />
     <div id='fieldspace'></div>
   @endif
 </div>
@@ -34,11 +34,12 @@
 <div class="card">
   <h3>Tags</h3>
   <ul class="list-unstyled">
-    @foreach($tags as $tag)
+    @foreach($tags->sort() as $tag)
       <li>
         <a href="/posts/tags/{{ $tag }}">{{ $tag }}</a>
       </li>
     @endforeach
+    <br />
     <li>
       <a href="/posts">All</a>
     </li>
@@ -68,24 +69,25 @@
 </div>
 
 <div class="card">
-  <h3>Tags</h3>
-  <ul class="list-unstyled">
-    @foreach($tags as $tag)
-      <li>
-        <a href="/posts/tags/{{ $tag }}">{{ $tag }}</a>
-      </li>
-    @endforeach
-    <li>
-      <a href="/posts">All</a>
-    </li>
-  </ul>
-</div>
-
-<div class="card">
   <h3>Popular Post</h3>
   <div class="fakeimg"><img src="/storage/cover_images/slayer-xtra.jpg" width="170" alt="image" /></div><br />
   <div class="fakeimg"><img src="/storage/cover_images/atthegates-xtra.jpg" width="170" alt="image" /></div><br />
   <div class="fakeimg"><img src="/storage/cover_images/Fleshgod-Apocalpse-xtra.jpg" width="170" alt="image" /></div>
+</div>
+
+<div class="card">
+  <h3>Tags</h3>
+  <ul class="list-unstyled">
+    @foreach($tags->sort() as $tag)
+      <li>
+        <a href="/posts/tags/{{ $tag }}">{{ $tag }}</a>
+      </li>
+    @endforeach
+    <br />
+    <li>
+      <a href="/posts">All</a>
+    </li>
+  </ul>
 </div>
 
 <div class="card">

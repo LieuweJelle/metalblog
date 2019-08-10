@@ -13,8 +13,6 @@ class UserController extends Controller
 {
     public function __construct(){
         $this->middleware('auth');
-        //$this->middleware('auth', ['only', 'index']);
-        //$this->middleware('auth', ['except', 'index']);
     }
 
     /**
@@ -26,12 +24,6 @@ class UserController extends Controller
     {
         $users = \App\User::with('roles')->get(); //User::all();
         return view('users.index', compact('users'));
-    }
-
-    public function indexall()
-    {
-        $users = \App\User::with('roles')->get(); //User::all();
-        return view('users.indexall', compact('users'));
     }
 
     /**

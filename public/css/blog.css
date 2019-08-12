@@ -23,7 +23,7 @@ body.article {
   font-size: 40px;
   text-align: center;
   background: #ddd;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   box-shadow: inset 2px 2px 6px #000,
     0 0 0 1px #000,
     0 0 0 2px #999,
@@ -129,8 +129,10 @@ p.after {  position:relative;
 
 .card {
   background-color: white;
+  border-style: solid;
+  border-width: 1px;  border-color:rgba(139,0,0,0.15);
   padding: 20px;
-  margin-top: 20px;
+  margin-top: 0px;
   position:relative;
 }
 .subcard {

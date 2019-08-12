@@ -28,7 +28,7 @@ Route::get('/posts/tags/{tag}', 'TagsController@index');
 Route::post('/posts/{post}/comments', 'CommentsController@store');
 Route::get('/posts/comments/{comment}', 'CommentsController@destroy');
 
-Auth::routes(['register'=> false, 'verify' => true]);
+Auth::routes(['verify' => true]); //'register'=> false, 
 
 Route::get('/home', 'HomeController@index'); //->name('home');
 

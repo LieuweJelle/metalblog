@@ -3,7 +3,7 @@
     <button type="button" class="button" id="button5" onclick="javascript:location.href='{{ url('/logout') }}'">uitloggen</button><br />
     <div id='fieldspace'></div>
   @else
-    <button type="button" class="button" id="button5" onclick="javascript:location.href='{{ url('/login') }}'">inloggen</button><br />
+  <button type="button" class="button" id="button5" onclick="javascript:$('#loginblock').slideDown(1000);$('html,body').animate({scrollTop: $('.blog').offset().top},'slow');">inloggen</button><br />
     <div id='fieldspace'></div>
   @endif
   <form class="example" action="search.blade.php" method="post">
@@ -15,13 +15,12 @@
   @if (Auth::check())
     <button type="button" class="button" id="button1" onclick="javascript:location.href='{{ url('/posts/create') }}'">upload nieuw artikel</button><br />
     <div id='fieldspace'></div>
-    <button type="button" class="button" id="buttonnew1" onclick="javascript:location.href='{{ url('/users') }}'">register users</button><br />
+    <button type="button" class="button" id="buttonnew1" onclick="javascript:location.href='{{ url('/users') }}'">registreer gebruiker</button><br />
     <div id='fieldspace'></div>
     <a  class="button" href="{{ url('/noise/noiseplayer.php') }}" target="_blank"><button class="button" id="button6">noisePlayer()</button></a><br />
     <div id='fieldspace'></div>
   @endif
 </div>
-
   
 <div class="card">
   <h2>About Me</h2>

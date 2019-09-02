@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="card">
-    <h2 class='darkred'>Blog: nieuw artikel publiseren:</h2>
+    <h2 class='darkred'>Blog: nieuw artikel publiceren:</h2>
     <p>Titel Blog, Text Blog en Categorie zijn verplicht in te vullen.<br />
     Subtitel en Subtext zijn optioneel.<br />
     Selecteer vervolgens eerst een foto en druk daarna op 'Upload naar Website'.<br />
@@ -52,7 +52,7 @@
             <div id='fieldspace'></div>
             <span class='namefield'>Selecteer een foto:</span>
             <input type="file" name="cover_image" id="cover_image" /><br />
-            <div id='fieldspace'></div>
+            <div id='fieldspace'></div><div id='fieldspace'></div>
             <span class='namefield'>Selecteer een logo:</span>
             <input type="file" name="cover_image2" id="cover_image2" /><br /><br />
 <!--  under construction!!            
@@ -72,10 +72,10 @@
   </div>
 </div><br /><br />
 -->            
-            <button type="submit" name="submit2" id="button2">Publiseren</button>
-            <button type="button" name="back" id="button2" onclick="history.back()">Terug naar Blog</button>
+            <button type="submit" name="submit2" id="button2" class="button">Publiceren</button>
+            <button type="button" name="back" id="button2" class="button" onclick="history.back()">Terug naar Blog</button>
             @include('layouts.error')
-        </div>
+        </div><br />
     </form>
 </div>
 <script src="{{ asset('js/functions.js') }}"></script>

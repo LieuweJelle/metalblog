@@ -7,7 +7,7 @@
             {{ session('message') }}
         </div>
     @endif
-    <h2 class='darkred'>Blog: gewijzigd artikel publiseren:</h2>
+    <h2 class='darkred'>Blog: gewijzigd artikel publiceren:</h2>
     <p>Titel Blog, Text Blog en Categorie zijn verplicht in te vullen.<br />
     Subtitel en Subtext zijn optioneel.<br />
     Selecteer vervolgens eerst een foto en druk daarna op 'Upload naar Website'.<br />
@@ -61,10 +61,10 @@
             <div id='fieldspace'></div>
             <span class='namefield'>Selecteer een logo:</span>
             <input type="file" name="cover_image2" id="cover_image2" /><br /><br />
-            <button type="submit" name="submit2" id="button2">Publiseren</button>
-            <button type="button" name="back" id="button2" onclick="history.back()">Terug naar Blog</button>
+            <button type="submit" name="submit2" id="button2" class="button">Publiceren</button>
+            <button type="button" name="back" id="button2" class="button" onclick="history.back()">Terug naar Blog</button>
             @include('layouts.error')
-        </div>
+        </div><br />
     </form>
 </div>
 <script src="{{ asset('js/functions.js') }}"></script>

@@ -9,8 +9,6 @@
     <title>Blog</title>
 
    <link href="{{ asset('css/blog.css') }}" rel="stylesheet">
-         <!--    <link href="{{ asset('css/bootstrap.css') }}" rel="stylesheet">
-           <link href="{{ asset('css/bootstrap-responsive.css') }}" rel="stylesheet"> -->
  <link href="{{ asset('css/bootstrap-formhelpers.css') }}" rel="stylesheet">
    <link href="{{ asset('css/bootstrap-formhelpers-countries.flags.css') }}" rel="stylesheet">
  <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->

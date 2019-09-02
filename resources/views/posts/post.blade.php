@@ -46,8 +46,14 @@
                     <input type="text" id="txt" size="43" maxlength="50" name="title" value="" autocomplete="off" /><br />
                     <div id="fieldspace"></div>
                     <span class="namefield">Text Reactie:</span><br />
-                    <textarea class="form-control" rows="3" cols="75" id="comment" name="body"></textarea><br />
-                    <button type="submit" name="submit" id="button5">Add Comment</button>
+                    <textarea class="form-control" rows="10" cols="75" id="comment" name="body"></textarea><br />
+                    <!-- <script>
+                        CKEDITOR.replace( 'comment', {
+                            language: 'nl',
+                            uiColor: '#dddddd'
+                        });
+                    </script> -->
+                    <button type="submit" name="submit" id="button5" class="button">Toevoegen</button>
                 </form>
                 @include('layouts.error')
             </div>

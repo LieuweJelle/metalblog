@@ -1,6 +1,10 @@
 <div id="loginblock"><br /><h3 style="color:#ac0000;">&#8658;&nbsp;&nbsp;&nbsp;blog in</h3>
     <div class='main'>
-    <form name='login' action="{{ route('login') }}" method='post' autocomplete='off' class='login'>
+    @isset($url)
+        <form name='login' action='{{ url("login/$url") }}' method='post' autocomplete='off' class='login'>
+    @else
+        <form name='login' action="{{ route('login') }}" method='post' autocomplete='off' class='login'>
+    @endisset
         @csrf
         <span class='namefieldPw'>E-mail Adres</span>
         <input id="email" size='30' maxlength='40' type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" required autofocus>
@@ -26,13 +30,19 @@
         </label>
         <div id='fieldspace'></div><div id='fieldspace'></div>
         <span class='namefieldPw'>&nbsp;</span>
-        <input type='submit' class='button' value='Inloggen' name='submit' onclick='javascript:$("#loginblock").slideUp(1000);' /><br />
+        @if(!$errors->any())
+            <input type='submit' class='button' value='Inloggen' name='submit' /><br />
+        @else
+            <input type='submit' class='button' value='Inloggen' name='submit' /><br />
+        @endif
         <div id='fieldspace'></div>
         <span class='namefieldPw'>&nbsp;</span>
         <input type='button' class='button' value='Terug' name='button' onclick='javascript:$("#loginblock").slideUp(1000);' /><br />
-        <a class="btn btn-link" href="{{ route('password.request') }}">
-            {{ __('Forgot Your Password?') }}
-        </a>
+        @if (Route::has('password.request'))
+            <a class="btn btn-link" href="{{ route('password.request') }}">
+                {{ __('Forgot Your Password?') }}
+            </a>
+        @endif
         </form>
     </div><br />
 </div>

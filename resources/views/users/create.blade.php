@@ -181,7 +181,7 @@
                             <div class="card-header">{{ __('Vertel iets over u zelf (werk, hobby\'s, interesses )') }}</div>
                     
                         <div class="form-group"><br />
-                            <textarea rows="4" cols="10" class="ta" name="intro" id="intro">{{ old('intro') }}</textarea>
+                            <textarea rows="4" cols="94" class="ta" name="intro" id="intro">{{ old('intro') }}</textarea>
                         </div>
                          
                         <div class="form-group row mb-0">
@@ -189,7 +189,7 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Toevoegen') }}
                                 </button>
-                                <a href="/users" class="btn btn-outline-primary"">
+                                <a href="/users" class="btn btn-outline-primary">
                                     {{ __('Terug') }}
                                 </a>
                             </div>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Gegenereerd op: 13 aug 2019 om 13:57
+-- Gegenereerd op: 09 aug 2019 om 16:29
 -- Serverversie: 10.1.30-MariaDB
 -- PHP-versie: 7.2.2
 
@@ -52,8 +52,7 @@ INSERT INTO `comments` (`id`, `user_id`, `post_id`, `body`, `created_at`, `updat
 (14, 1, 13, 'Beste engelse Punk-band ever!!', '2018-05-11 15:59:49', '2018-05-11 15:59:49', 'Gezien in de Melkweg.'),
 (17, 4, 7, '<h2>Members</h2>\r\n<dl>\r\n<dt>Current</dt>\r\n</dl>\r\n<ul>\r\n<li>Paolo Rossi – bass, clean vocals (2007–present)</li>\r\n<li>Francesco Paoli – lead vocals, rhythm guitar (2007–2009, 2017–present), drums, backing vocals, studio rhythm guitar (2009–2017)</li>\r\n<li>Francesco Ferrini – piano, string arrangements, orchestral effects (2010–present)</li>\r\n</ul>\r\n<dl>\r\n<dt>Former</dt>\r\n</dl>\r\n<ul>\r\n<li>Tommaso Riccardi – lead vocals, rhythm guitar (2009–2017)</li>\r\n<li>Cristiano Trionfera – lead guitar, backing vocals (2007–2017)</li>\r\n<li>Francesco Struglia – drums (2007–2009)</li>\r\n</ul>\r\n<dl>\r\n<dt>Session</dt>\r\n</dl>\r\n<ul>\r\n<li>Francesco Ferrini – piano, string arrangements, orchestral effects (2009–2010)</li>\r\n<li>Mauro Mercurio – drums (2009)</li>\r\n<li>Tommaso Riccardi – rhythm guitar (2009)</li>\r\n<li>Veronica Bordacchini – operatic vocals (2011–present)</li>\r\n</ul>\r\n<dl>\r\n<dt>Live</dt>\r\n</dl>\r\n<ul>\r\n<li>Veronica Bordacchini – operatic vocals (2013–present)</li>\r\n<li>Fabio Bartoletti – lead guitar (2017–present)</li>\r\n<li>David Folchitto – drums (2017–present)</li>\r\n</ul>', '2018-05-12 05:49:01', '2018-05-12 05:49:01', 'SUPERGROUP!!'),
 (18, 1, 7, '<h2>Track listing</h2>\r\n<p>All lyrics written by Tommaso Riccardi and Paolo Rossi except where noted; all music composed by Francesco Paoli and Francesco Ferrini except where noted.</p>\r\n<table class=\"tracklist\" style=\"display:block;border-spacing:0px;border-collapse:collapse;padding:4px\">\r\n<tr>\r\n<th class=\"tlheader\" scope=\"col\" style=\"width:2em;padding-left:10px;padding-right:10px;text-align:right;background-color:#eee\"><abbr title=\"Number\">No.</abbr></th>\r\n<th class=\"tlheader\" scope=\"col\" style=\"width:100%;text-align:left;background-color:#eee\">Title</th>\r\n<th class=\"tlheader\" scope=\"col\" style=\"width:4em;padding-right:10px;text-align:right;background-color:#eee\">Length</th>\r\n</tr>\r\n<tr style=\"background-color:#fff\">\r\n<td style=\"padding-right:10px;text-align:right;vertical-align:top\">1.</td>\r\n<td style=\"vertical-align:top\">\"Marche Royale\"</td>\r\n<td style=\"padding-right:10px;text-align:right;vertical-align:top\">1:58</td>\r\n</tr>\r\n<tr style=\"background-color:#f7f7f7\">\r\n<td style=\"padding-right:10px;text-align:right;vertical-align:top\">2.</td>\r\n<td style=\"vertical-align:top\">\"In Aeternum\"</td>\r\n<td style=\"padding-right:10px;text-align:right;vertical-align:top\">5:26</td>\r\n</tr>\r\n<tr style=\"background-color:#fff\">\r\n<td style=\"padding-right:10px;text-align:right;vertical-align:top\">3.</td>\r\n<td style=\"vertical-align:top\">\"Healing Through War\" <span style=\"font-size:85%\">(Speech from \'De Bello Gallico\' by Julius Caesar)</span></td>\r\n<td style=\"padding-right:10px;text-align:right;vertical-align:top\">4:43</td>\r\n</tr>\r\n<tr style=\"background-color:#f7f7f7\">\r\n<td style=\"padding-right:10px;text-align:right;vertical-align:top\">4.</td>\r\n<td style=\"vertical-align:top\">\"The Fool\"</td>\r\n<td style=\"padding-right:10px;text-align:right;vertical-align:top\">4:06</td>\r\n</tr>\r\n<tr style=\"background-color:#fff\">\r\n<td style=\"padding-right:10px;text-align:right;vertical-align:top\">5.</td>\r\n<td style=\"vertical-align:top\">\"Cold As Perfection\" <span style=\"font-size:85%\">(Additional speaking by Nate Kantner)</span></td>\r\n<td style=\"padding-right:10px;text-align:right;vertical-align:top\">6:31</td>\r\n</tr>\r\n<tr style=\"background-color:#f7f7f7\">\r\n<td style=\"padding-right:10px;text-align:right;vertical-align:top\">6.</td>\r\n<td style=\"vertical-align:top\">\"Mitra\" <span style=\"font-size:85%\">(Additional speaking by Nate Kantner)</span></td>\r\n<td style=\"padding-right:10px;text-align:right;vertical-align:top\">3:49</td>\r\n</tr>\r\n<tr style=\"background-color:#fff\">\r\n<td style=\"padding-right:10px;text-align:right;vertical-align:top\">7.</td>\r\n<td style=\"vertical-align:top\">\"Paramour (Die Leidenschaft Bringt Leiden)\" <span style=\"font-size:85%\">(Lyrics taken from \'Trilogie der Leidenschaft\' by <a href=\"/wiki/Johann_Wolfgang_Von_Goethe\" class=\"mw-redirect\" title=\"Johann Wolfgang Von Goethe\">Johann Wolfgang Von Goethe</a>)</span></td>\r\n<td style=\"padding-right:10px;text-align:right;vertical-align:top\">3:43</td>\r\n</tr>\r\n<tr style=\"background-color:#f7f7f7\">\r\n<td style=\"padding-right:10px;text-align:right;vertical-align:top\">8.</td>\r\n<td style=\"vertical-align:top\">\"And the Vulture Beholds\"</td>\r\n<td style=\"padding-right:10px;text-align:right;vertical-align:top\">5:13</td>\r\n</tr>\r\n<tr style=\"background-color:#fff\">\r\n<td style=\"padding-right:10px;text-align:right;vertical-align:top\">9.</td>\r\n<td style=\"vertical-align:top\">\"Gravity\"</td>\r\n<td style=\"padding-right:10px;text-align:right;vertical-align:top\">5:12</td>\r\n</tr>\r\n<tr style=\"background-color:#f7f7f7\">\r\n<td style=\"padding-right:10px;text-align:right;vertical-align:top\">10.</td>\r\n<td style=\"vertical-align:top\">\"A Million Deaths\"</td>\r\n<td style=\"padding-right:10px;text-align:right;vertical-align:top\">5:27</td>\r\n</tr>\r\n<tr style=\"background-color:#fff\">\r\n<td style=\"padding-right:10px;text-align:right;vertical-align:top\">11.</td>\r\n<td style=\"vertical-align:top\">\"Syphilis\"</td>\r\n<td style=\"padding-right:10px;text-align:right;vertical-align:top\">7:22</td>\r\n</tr>\r\n<tr style=\"background-color:#f7f7f7\">\r\n<td style=\"padding-right:10px;text-align:right;vertical-align:top\">12.</td>\r\n<td style=\"vertical-align:top\">\"King\" <span style=\"font-size:85%\">(Written by Francesco Ferrini)</span></td>\r\n<td style=\"padding-right:10px;text-align:right;vertical-align:top\">3:59</td>\r\n</tr>\r\n</table>', '2018-05-12 05:59:54', '2018-05-12 05:59:54', 'Tracklist King'),
-(19, 1, 19, 'Current members\r\nZbigniew \"Inferno\" Promiński – drums (1998–present)\r\nBartłomiej \"Bart\" Szudek – guitars (2000–present)\r\nPiotr \"P.\" Ostrowski – bass (2011–present)\r\nMarcin \"Skullripper\" Sienkiel – vocals, guitars (2017–present)', '2019-08-07 10:27:20', '2019-08-07 10:27:20', 'In Extremis Azarat\'s beste'),
-(20, 1, 18, 'The band started in 1986 under the name Corpse and changed it to Grave in 1988. They recorded various demos from 1986 to 1991, and recorded some singles and EPs as well. Their debut full-length album Into the Grave was released in 1991. The release led to a European and American tour.', '2019-08-10 14:25:48', '2019-08-10 14:25:48', 'Early years (1986–1993)');
+(19, 1, 19, 'Current members\r\nZbigniew \"Inferno\" Promiński – drums (1998–present)\r\nBartłomiej \"Bart\" Szudek – guitars (2000–present)\r\nPiotr \"P.\" Ostrowski – bass (2011–present)\r\nMarcin \"Skullripper\" Sienkiel – vocals, guitars (2017–present)', '2019-08-07 10:27:20', '2019-08-07 10:27:20', 'In Extremis Azarat\'s beste');
 
 -- --------------------------------------------------------
 
@@ -102,7 +101,7 @@ CREATE TABLE `password_resets` (
 --
 
 INSERT INTO `password_resets` (`email`, `token`, `created_at`) VALUES
-('l.j.van.der.meulen@gmail.com', '$2y$10$Y7Ic.GgkQ7aHqXzCpGmMgeJyquSzm819XGVz8Lh0rAHNyzoiTCBRG', '2019-08-11 13:42:20');
+('l.j.van.der.meulen@gmail.com', '$2y$10$g8wz9YF8s5nuaIjxyJ6UxOnD5buvXIxjhA.8oeJzDjiCVpVkca/je', '2019-08-06 12:52:11');
 
 -- --------------------------------------------------------
 
@@ -327,14 +326,14 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`, `firstname`, `lastname`, `street`, `streetnumber`, `zipcode`, `place`, `telephone`, `intro`) VALUES
-(1, 'LieuweJelle', 'l.j.van.der.meulen@gmail.com', '$2y$10$fqO0PIPy5aHNO9FVXsFobeKJ8gsGFs/6fwV868FVBt3IMJZGEtskW', 'Ahz3pkwSIQGjybJDwQq1wyAwGqIVBIPJo4JZKgJKOSD0YN1UH0iLHFai0HLV', '2018-04-23 10:58:28', '2019-08-09 08:52:11', 'Lieuwe Jelle', 'van der Meulen', 'Bedumerweg', '84', '9716AG', 'Groningen', '0612345678', 'Wielrennen, biljarten, muziek en websites bouwen.'),
+(1, 'LieuweJelle', 'l.j.van.der.meulen@gmail.com', '$2y$10$fqO0PIPy5aHNO9FVXsFobeKJ8gsGFs/6fwV868FVBt3IMJZGEtskW', 'TGKh694XqmPZvYTDCUzxUOqWOPjFi19fPrmFkY8hdrE4j6vMnzLBIwB2t39K', '2018-04-23 10:58:28', '2019-08-09 08:52:11', 'Lieuwe Jelle', 'van der Meulen', 'Bedumerweg', '84', '9716AG', 'Groningen', '0612345678', 'Wielrennen, biljarten, muziek en websites bouwen.'),
 (2, 'Gepper', 'geppers@home.nl', '$2y$10$A9WkGbFmVfJkfrhpr9r6RuzJp6/x6x2WEo2ubzCQJly0Fy0L8jtMK', NULL, '2018-05-05 06:28:23', '2019-08-09 09:16:07', 'Gepkinus', 'Brouwer', 'Noorderstraat', '10', '9716AG', 'Groningen', '0612345678', 'Gepper hierzoot.'),
 (3, 'Henkie', 'henkie@home.nl', '$2y$10$ogtR0QjU0xwTbrxVrFzPh..z/vZGecMuJhTQsGTP/UdWqXfP0.poi', NULL, '2018-05-07 05:28:31', '2019-08-09 09:18:34', 'Henk', 'Troudes', 'Hoendiep', '123', '9718KL', 'Groningen', '0612345678', NULL),
 (4, 'Jcuperus', 'jaepcuperus@hotmail.com', '$2y$10$3fgwxDSms1lBEE2DKaftT.dUH68a.saQgF3lWHerSMbFccxxNLqYK', 'LPn2BymI4BKQzTpBU2uhNQyJK2UCR8pueCNNvSGW8i6kkMTmMMR8v0Wmw0vo', '2018-05-08 09:11:30', '2019-08-09 08:55:28', 'Jaep', 'Cuperus', 'Achterweg', '1', '9000AB', 'Groningen', '0612345678', 'Programmeren!!'),
 (5, 'Pietsie', 'p@home.nl', '$2y$10$rMnP3CGccPsLa00sb.KeSedKAn4FY3/jPw7AubjYnGjwaUxDaaKia', NULL, '2018-05-13 14:26:44', '2019-08-09 09:05:36', 'Petra', 'Holverda', 'Stappersteeg', '34', '2222GG', 'Britsum', '0612345678', 'Mag graag schoonmaken en zo.'),
 (6, 'jan', 'j@j.nl', '$2y$10$arcnn90kjFEDv2BSsHkPwej2f4ubQdn1Ql6sASPz7u0vyHpfIobRi', NULL, '2018-05-14 05:38:06', '2019-08-09 09:06:08', 'Jan Peter', 'Jansen', 'Stappersteeg', '11', '1111aa', 'Groningen', '0612345678', NULL),
 (7, 'L.J. van der Meulen', 'l@l.nl', '$2y$10$RPFgWdcywcXzf6J4xZvdJuaDl.JliC9CvXIFzPBVHNmafg0Y1PK4e', NULL, '2018-05-14 06:07:41', '2019-08-09 08:56:18', 'leo', 'van der Meulen', 'Bedumerweg 84', '34', '9716AG', 'Groningen', '0612345678', 'ik kan alleen commentaar leveren op deze website.'),
-(9, 'Mike', 'mjongsma@codegorilla.nl', '$2y$10$YMaWtQ1xYLeX4rZITH017.6F0fBUfRmeBUwZo5Li/.iyYi.LyRRLS', 'nlE4m6axzItQ3c3dtB46o0DrWmLA4LbuhKaCsvJ7WiUGS1HgUgKEo4pBlc5p', '2019-08-08 10:04:23', '2019-08-09 08:57:45', 'Mike', 'Jongsma', 'xxxx', '11', '1111XX', 'Groningen', '0611111111', NULL);
+(9, 'Mike', 'mjongsma@codegorilla.nl', '$2y$10$YMaWtQ1xYLeX4rZITH017.6F0fBUfRmeBUwZo5Li/.iyYi.LyRRLS', NULL, '2019-08-08 10:04:23', '2019-08-09 08:57:45', 'Mike', 'Jongsma', 'xxxx', '11', '1111XX', 'Groningen', '0611111111', NULL);
 
 --
 -- Indexen voor geëxporteerde tabellen
@@ -410,7 +409,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT voor een tabel `comments`
 --
 ALTER TABLE `comments`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT voor een tabel `migrations`
@@ -446,7 +445,7 @@ ALTER TABLE `tasks`
 -- AUTO_INCREMENT voor een tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
